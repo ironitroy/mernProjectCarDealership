@@ -1,6 +1,7 @@
 
 # dependencies
 /node_modules
+/Recovery-email
 /frontend/node_modules
 /frontend/.pnp
 /frontend/.pnp.js
