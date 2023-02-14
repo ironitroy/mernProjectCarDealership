@@ -34,11 +34,14 @@ app.use("/api/v1",contact);
 app.use("/api/v1",career);
 app.use("/public/pdfs", express.static("public"));
 
-app.use(express.static(path.join(__dirname,"../frontend/build")));
+app.use(express.static(path.join(__dirname,'build')));
 
 app.get("*",(req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+    res.sendFile(path.resolve(__dirname, 'build','index.html'));
   });
+
+
+
 
 app.get("/public/pdfs/:filename", (req, res) => {
     res.download(`public/pdfs/${req.params.filename}`);
